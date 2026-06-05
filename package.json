@@ -1,0 +1,32 @@
+{
+  "name": "flappy-kiro",
+  "version": "1.0.0",
+  "description": "A browser-based Flappy Bird clone built with vanilla JavaScript and HTML5 Canvas",
+  "main": "src/main.js",
+  "type": "module",
+  "scripts": {
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest --testEnvironment=jsdom",
+    "test:watch": "NODE_OPTIONS=--experimental-vm-modules jest --watch --testEnvironment=jsdom",
+    "test:coverage": "NODE_OPTIONS=--experimental-vm-modules jest --coverage --testEnvironment=jsdom"
+  },
+  "devDependencies": {
+    "fast-check": "^3.22.0",
+    "jest": "^29.7.0",
+    "jest-canvas-mock": "^2.5.2",
+    "jest-environment-jsdom": "^29.7.0",
+    "@jest/globals": "^29.7.0"
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "setupFiles": [
+      "jest-canvas-mock"
+    ],
+    "testMatch": [
+      "**/tests/**/*.test.js"
+    ],
+    "moduleNameMapper": {
+      "^(\\.{1,2}/.*)\\.js$": "$1"
+    },
+    "passWithNoTests": true
+  }
+}
